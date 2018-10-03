@@ -1,0 +1,13 @@
+.mostraren-chico,.mostraren-mediano, .mostraren-grand{
+    visibility: hidden;
+    display: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}

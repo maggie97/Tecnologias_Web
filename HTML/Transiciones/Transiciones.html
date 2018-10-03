@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Title</title>
+  <style type="text/css">
+    .caja, .lol{ /*podemos agrupar varias clases con las mismas caracteristicas*/
+      background-color: deeppink;
+      height: 100px;
+      width: 100px;
+      position: relative;
+      top: 100px;
+      left: 100px;
+      transform: rotate(45deg);
+
+      /*transition: width 2s, height 3s;/*Cambia su tamaño; la altura en 2s y la anchura en 3s despues de pasar sobre ella*/
+      /*transition: top 2s, left 3s; /*Cambia su posicion; la posicion en "y" en 2s & en "x" en 3s despues de pasar sobre ella*/
+      /*transition: background-color 3s;/*Cambia el color en 3s despues de pasar sobre ella despues de pasar sobre ella*/
+      /*transition: transform 2s;/*Usa los transform en un periodo de 2s despues de pasar sobre ella*/
+      transition: all 2s;
+    }
+    .caja:hover{/**/
+/*
+      height: 100px;
+      width: 100px;
+      top: 300px;
+      left: 300px;*/
+      background-color: black;
+      transform: scale(2) rotate(180deg);/*; Escala al doble la forma y la rota*/
+    }
+    p{
+      color: white;
+      font: Arial;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: bold;
+      transform: rotate(235deg);
+      position: relative;
+      top: 40px;
+      left: -10px;
+      opacity: 0;
+      transition: all 3s;
+    }
+    .caja:hover p{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="caja">
+    <p> Maggie </p>
+  </div>
+</body>
+</html>

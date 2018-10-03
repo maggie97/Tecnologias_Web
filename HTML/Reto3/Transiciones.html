@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <style type="text/css">
+        body{
+            background-color: cadetblue;
+        }
+        .Marco{
+            height: 200px;
+            width: 300px;
+            margin-top: 10px;
+            background-color: white;
+            box-shadow: 1px 1px 0px 1px rgb(125, 126, 126);
+            border: 10px solid white;
+            position: relative;
+            right: -200px;
+            top: 200px;
+            overflow: hidden;
+        }
+        .Marco img{
+            width: 300px;
+            height: 200px;
+            position: relative;
+            display: block;
+            transition: all 0.5s ease-out;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            transition-delay: initial;
+        }
+        .Marco:hover img{
+            transform: rotate(900deg) scale(.2);
+            opacity: 0;
+        }
+        .Marco h1{
+            position: relative;
+            padding: 5px;
+            font-size: 18px;
+            font-family: 'Oswald', Arial, sans-serif;
+            text-align: center;
+            font-weight: 300;
+            color: #FFFFFF;
+            background-color: black;
+            top: -600px;
+            transition: all 350ms 80ms ease-in-out;
+        }
+        .Marco:hover h1{
+            top: -400px;
+        }
+        .Marco p{
+            position: relative;
+            font-size: 12px;
+            font-family: Georgia, sans-serif;
+            text-align: justify;
+            color: #FFFFFF;
+            top: -600px;
+            padding: 0px 20px;
+            transition: all 300ms 80ms ease-in-out;
+        }
+        .Marco:hover p{
+            top: -380px;
+        }
+        .Marco a{
+            position: relative;
+            background-color: black;
+            color: #FFFFFF;
+            padding: 10px;
+            top: -560px;
+            left: 120px;
+            right: -400px;
+            transition: all 150ms 80ms ease-in-out;
+        }
+        .Marco:hover a{
+            top: -360px;
+        }
+        .fondo{
+            width: 300px;
+            height: 200px;
+            background-color: coral;
+            opacity: 0;
+
+            position: relative;
+            top: -200px;
+            transition: all .5s 20ms ease-out;
+        }
+        .Marco:hover .fondo{
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <div class="Marco">
+        <img src="corazon219.jpg" alt="Taylor Swift" >
+        <div class ="fondo"></div>
+        <h1>Hover Style #7</h1>
+        <p>A wonderful serenity has taken possession of my entire soul,
+            like these sweet mornings of spring which I enjoy with my whole heart.</p>
+        <a href="#">Ver mas</a>
+    </div>
+
+</body>
+</html>

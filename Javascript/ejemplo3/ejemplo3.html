@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style type="text/css">
+        #caja{
+            /*border: 1px solid black;*/
+            width: 200px;
+            padding: 10px 70px 20px 70px;
+            text-align: center;
+        }
+        table, tr, td{
+            border:1px solid black; 
+            border-collapse:collapse;
+         }
+    </style>
+    <script type="text/javascript">
+        function escribeOp(){
+            for(i = 0; i<=255 ; i++) document.write("<option value ='" + i + "'> "+ i + "</option>") ;
+        }
+
+        function cambiacolor(){
+            
+            r = document.getElementById("red").value;
+            g = document.getElementById("green").value;
+            b = document.getElementById("blue").value;
+
+            if(document.getElementById("fnd").checked == true)
+                document.getElementById("table").style.backgroundColor = "rgb(" + r + "," + g + ", " + b +" )";
+            else if(document.getElementById("txt").checked == true)
+                document.getElementById("table").style.color = "rgb(" + r + "," + g + ", " + b +" )";
+        }
+        
+    </script>
+</head>
+<body>
+    R   <select name="" id="red">
+            <script type="text/javascript">
+                escribeOp();
+            </script>
+        </select>
+    G   <select name="" id="green">
+            <script type="text/javascript">
+                escribeOp();
+            </script>
+        </select>
+    B   <select name="" id="blue">
+            <script type="text/javascript">
+                escribeOp();
+            </script>
+        </select>
+        <br>
+    <input type="radio" name="change" id="txt" checked="checked">Texto
+    <input type="radio" name="change" id="fnd">Fondo
+    <input type="button" value="Cambia color" onclick="cambiacolor()">
+    
+    <br><br>
+    <div id="caja">
+        <!--Margarita-->
+        <table id="table" class="tabla"  >
+            <tr>
+                <td>Texto</td>
+                <td>Texto</td>
+                <td>Texto</td>
+                <td>Texto</td>
+            </tr>
+            <tr>
+                <td>Texto</td>
+                <td>Texto</td>
+                <td>Texto</td>
+                <td>Texto</td>
+            </tr>
+            <tr>
+                <td>Texto</td>
+                <td>Texto</td>
+                <td>Texto</td>
+                <td>Texto</td>
+            </tr>
+            <tr>
+                <td>Texto</td>
+                <td>Texto</td>
+                <td>Texto</td>
+                <td>Texto</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

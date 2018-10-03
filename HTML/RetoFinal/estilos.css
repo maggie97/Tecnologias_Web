@@ -1,0 +1,223 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif ;
+    font-size: 1em;
+}
+h1, h2, h3{
+    font-family: "Montserrat", sans-serif;
+}
+div{
+    border: .1px solid transparent;/**/
+}
+.Contiene{
+    margin: 0  auto;
+    width: 70%;
+    max-width: 1100px;
+    /*border: 2px solid blue;*/
+}
+
+/*Barra de menu*/
+.head{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    /*position: fixed;*/
+}
+.head a{
+    margin: auto;
+    text-align: center;
+}
+.Hmenu{
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #000;
+    margin: 0 auto;
+    width: 400px;
+    position: relative;
+    top: -40px;
+}
+.Hmenu ul{
+    list-style: none;
+
+}
+.Hmenu ul li{
+    float: left;
+    margin: 0 10px;
+}
+.Hmenu a:hover{
+    color: #12E290;
+}
+.Hmenu li a{
+    text-decoration: none;
+    color: #000;
+}
+/*Titulo chido */
+.Presentacion{
+    background: url("imagenes/bg-1.jpg") -300px 0;
+    background-size: 143% 1000px;
+    width: 100%;
+    height: 700px;
+    padding: 0;
+    margin: 0;
+
+}
+.Presentacion h1{
+    font-size: 110px;
+    font-weight: 600;
+    margin:  0;
+    padding: 0;
+    line-height: 40px;
+
+}
+.Presentacion h2{
+    font-size: 90px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+.Presentacion h3{
+    font-weight: 300;
+    font-size: 35px;
+    margin-top: 60px;
+    color: #333;
+}
+/*contenido*/
+.Demos-cont p {
+    text-align: center;
+    width: 100%;
+}
+ .Demos-cont h2{
+    margin-bottom: 0;
+}
+.demoTitle{
+    margin: auto;
+    width: 50%;
+}
+.Demos-cont h1{
+    color: #12E290;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    float: left;
+}
+.demo{
+    width: 273px;
+}
+.demo img, .footers img{
+    box-shadow: 0 2px 20px 0 rgba(10,10,10,.5);
+}
+.demo:hover .demohover{
+    opacity: .5;
+}
+.demo .btn{
+    visibility: hidden;
+}
+.demo:hover .btn{
+    visibility: visible;
+}
+.demohover{
+    position: absolute;
+    top: 849px;
+    background-color: #333333;
+    width: 273px;
+    height: 208px;
+    opacity: 0;
+}
+/*Pie de pagina */
+.PiePag{
+    background: rgb(18, 226, 144);
+    height: 363px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.acomoda{
+    margin: 0 auto;
+    width: 700px;
+}
+
+.footers{
+    width: 100%;
+    height: 300px;
+}
+.footers div{
+    width: 275px;
+    height: 280px;
+    /*border: .1px solid blueviolet;/**/
+    margin: 0 2% auto;
+    text-align: center;
+}
+.footerStyles{
+    margin: 0 auto;
+    text-align: center;
+}
+.footershover{
+    position: relative;
+    background-color: #333333;
+    top: -212px;
+    width: 273px;
+    height: 208px;
+    opacity: 0;
+    transition: 1s all;
+}
+.footershover:hover{
+    opacity: 1;
+}
+.btn{
+    background-color: rgb(18,226,135);
+    font-size: .667em;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    height: 15px;
+    width: 80px;
+    padding: 15px 20px;
+    text-align: center;
+    /*margin:  auto;*/
+}
+.btn:hover{
+    background-color: #333;
+    color: #fff;
+}
+.pp{
+    background-color: white;
+    color: #000;
+}
+.rigth{
+    float: right;
+}
+.left{
+    float: left;
+}
+.center{
+    position: relative;
+    top: -120px;
+    left: 80px;
+}
+
+.separacion{
+    margin: 0% 2%;
+}
+.centrado{
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+}
+.PiePag h1{
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -.16rem;
+    margin: 0;
+    padding: 0;
+}
+.PiePag h2{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -.16rem;
+    margin: 0;
+    padding: 0;
+}

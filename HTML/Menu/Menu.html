@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <style type="text/css">
+
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        a{
+            text-decoration: none;
+            color: chocolate;
+            font-size: 15px;
+            font-family: Tahoma;
+        }
+        .barra{
+            width: 100%;
+            height: 70px;
+            background-color: mediumaquamarine;
+        }
+        .espacio{
+            width: 80%;
+            margin: 0px auto;
+            padding: 25px;
+        }
+        .item{
+            list-style: none; /*Quita viñetas*/
+            margin: 0px;
+            padding: 0px;
+            float: left;
+            margin-left: 5px;
+        }
+        .item  > a{ /*Da atributos si y solo si es hijo directo de item y es un enlace*/
+            padding: 10px 20px;
+            border-left: 1px solid gray;
+            background-color: greenyellow;
+            /*border-radius: 10px ;*/
+            border-bottom-left-radius: 20px;
+            border-top-right-radius:  20px;
+               display: block;
+        }
+        .espacio ul {
+            padding: 0px;
+            margin: 0px;
+        }
+        .subMenu{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            position: absolute;
+            top: 63px;
+            visibility: hidden;
+            opacity: .1;
+            transition: all .5s;
+        }
+        .item:hover .subMenu{
+            opacity: 1;
+            visibility: visible;}
+        .SubOp{
+            background-color: aqua;/*bisque*/
+            padding: 10px 15px ;
+            border-bottom: 1px solid gray;
+            display: block;
+
+        }
+        .SubOp:hover{
+            background-color: cadetblue;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="barra">
+        <div class="espacio">
+
+            <li class="item">
+                <a class="op" href="#">Opcion 1</a>
+                <ul class="subMenu">
+                    <li class="subItem"><a class="SubOp" href="#"> Opcion 1.1 </a></li>
+                    <li class="subItem"><a class="SubOp" href="#"> Opcion 1.2 </a></li>
+                    <li class="subItem"><a class="SubOp" href="#"> Opcion 1.3 </a></li>
+                </ul>
+            </li>
+            <li class="item"><a class="op" href="#">Opcion 2</a></li>
+            <li class="item">
+                <a class="op" href="#">Opcion 3</a>
+                <ul class="subMenu">
+                    <li class="subItem"><a class="SubOp" href="#"> Opcion 3.1 </a></li>
+                    <li class="subItem"><a class="SubOp" href="#"> Opcion 3.2 </a></li>
+                    <li class="subItem"><a class="SubOp" href="#"> Opcion 3.3 </a></li>
+                    <li class="subItem"><a class="SubOp" href="#"> Opcion 3.4 </a></li>
+                </ul>
+            </li>
+            <li class="item"><a class="op" href="#">Opcion 4</a></li>
+            <li class="item"><a class="op" href="#">Opcion 5</a></li>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .btn{
+            background-color: blue;
+
+        }
+    </style>
+</head>
+<body>
+<br>
+<input type="url">
+<br>
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label for="file">Choose file to upload</label>
+        <input type="file" id="file" name="file" multiple>
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+</form>
+<br>
+<input type="text" list="misdatos" … >
+<datalist id="misdatos">
+    <option label="1er." value="Tacos">
+    <option label="2do." value="Tamales">
+    <option label="3ro." value="Tortas">
+</datalist>
+<br>
+<input type = "image">
+<br>
+<form>
+    User password:<br>
+    <input type="password">
+</form>
+<br>
+<input type="time">
+<textarea autofocus="autofocus" cols="100" maxlength="200px"
+          name="Barra de texto" placeholder="Intoduce texto"
+          required="required" rows="4" wrap="hard"></textarea>
+<br>
+<form>
+    <input type="range">
+    <input type="range" min="-10" max="10">
+    <input type="range" min="5" max="10" step="0.01">
+</form>
+<br>
+<input type="button" class="btn" value="Nuevo" style="float: right;">
+<br>
+<fieldset>
+    <legend>edad</legend>
+    <input type='checkbox' tabindex='20'
+           name='edad' value='20-39' > 20-39
+    <input type='checkbox' tabindex='21'
+           name='edad' value='40-59' > 40-59
+    <input type='checkbox' tabindex='22'
+           name='edad' value='60-79' > 60-79
+</fieldset>
+<input type="color">
+<br>
+<form>
+    <input type="radio" name="musica" value="jazz">jazz
+    <input type="radio" name="musica" value="pop">pop
+    <input type="radio" name="musica" value="rock">rock
+    <input type="radio" name="musica" value="country">country
+</form>
+<br>
+<span data-descr="Este es un texto de referencia">texto</span>
+<br>
+<input type="email" name="emailaddress" placeholder="correo@dominio.com"autocomplete="off"required>
+<br>
+<select>
+    <option value="volvo" disabled>Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="vw">VW</option>
+    <option label="Mercedes">Mercedes (Mercedes-Benz)</option>
+    <option value="audio" selected>Audi</option>
+
+</select>
+<audio controls>
+
+    <source src="horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<p>
+    <strong>Note:</strong>
+    The audio tag is not supported in Internet Explorer 8 and
+    earlier versions.
+</p>
+</body>
+</html>

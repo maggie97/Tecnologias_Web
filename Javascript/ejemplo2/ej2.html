@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<script type="text/javascript">
+function calcula(){
+	n1 = document.getElementById("num1").value;
+	n2 = document.getElementById("num2").value;
+	op = document.getElementById("op").value;
+	var rs = 0;
+	
+	switch (op){
+	//if(op == "+")
+		case "+":
+		rs = parseInt(n1) + parseInt(n2);
+		break;
+		
+	//else if(op == "-")
+		case "-":
+		rs = n1 - n2;
+		break;
+	//else if(op == "*")
+		case "*":
+		rs = n1 * n2;
+		break;
+	//else if(op == "/")
+		case "/":
+		rs = n1 / n2;
+		break;
+}
+
+	
+	document.getElementById("res").innerHTML = rs;
+	document.getElementById("resultado").value = rs;
+	
+}
+
+</script>
+</head>
+
+<body>
+Numero 1 <input type="text" id="num1"/><br/>
+Operacion<select id="op">
+			<option value="+">Suma</option>
+			<option value="-">Resta</option>
+			<option value="*">Multiplicación</option>
+			<option value="/">Divide</option>
+		</select>
+		<br/>
+numero 2 <input type="text" id="num2"/><br/>
+<input type="button" value="Calcular" onclick="calcula()"/> <br/>
+Resultado	<div id="res"></div>
+			<input type="text" id="resultado"/><br/>
+
+
+</body>
+
+</html>

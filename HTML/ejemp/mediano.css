@@ -1,0 +1,60 @@
+.mostraren-mediano{
+    display: block !important;
+    visibility: visible !important;
+}
+
+
+/*Redes Sociales*/
+.RS{
+    width: 100%;
+    height: 50px;
+    background-color: #ffcccc;
+}
+.RS h2{
+    float: left;
+}
+.RS h1{
+
+}
+.RS ul{
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+.RS ul li{
+    float: left;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+/*Encabezado de la pagina*/
+
+.encabezado{
+    background-color: #CCCCFF;
+    width: 100%;
+    overflow: hidden;
+    height: 150px;
+    text-align: center;
+}
+.encabezado h1{
+    margin: 0;
+
+}
+/*Menu*/
+.menu{
+    float: left;
+    background-color: #FF99FF;
+    width: 150px;
+}
+
+/*Estilos de cntenido*/
+.contenido{
+    float: left;
+    margin-left: 10px;
+}
+/*Pie de pag*/
+.piePag{
+    clear: left;
+    width: 100%;
+    background-color: aqua;
+}

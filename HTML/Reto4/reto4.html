@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reto4</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800|Raleway:700,800" rel="stylesheet">
+    <style type="text/css">
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins", "Open Sans", sans-serif;
+            text-align: center;
+        }
+        div {
+            border: 0.1px solid transparent;
+        }
+        li{
+            float: left;
+            padding: 0px;
+            font: normal normal normal 13px/1 Montserrat;
+            font-weight: 500;
+        }
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        span{
+            padding: 0px;
+            margin: 0px;
+        }
+        i{
+            margin-top: 0px;
+            padding-right: 12px;/**/
+            font-size: 11px;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            alignment: center;
+        }
+        .TotalContainer{
+            font-family: 'Montserrat', sans-serif;
+            font-size:  13px;
+            font-weight: 500;
+            /*height:  1000px;*/
+            overflow: hidden;
+        }
+        .header-top{
+            height: 55px;
+            font-size: 13px;
+            background-color: rgb(45, 62, 80);
+            transition: all 2s;
+        }
+        .Align{
+            max-width: 87%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 15px;
+            /*height: 49px;*/
+        }
+        .Align img{
+            float: left;
+            width: 271px;
+        }
+        .header-top:before{
+            content: "";
+            width: 41%;
+            border-bottom: 48px solid #86BC42;
+            position: relative;/**/
+            top: 10px;
+            float: right;
+            right: 0px;
+            z-index: 0;
+        }
+        .header-top::after{
+            content: "";
+            height: 0px;
+            right: 41%;
+            top: 10px;
+            position: absolute;/**/
+            border-right: 20px solid #86BC42;
+            border-top: 48px solid transparent;
+        }/**/
+        .header-info{
+            float: left;
+            margin-top: 2px;
+        }
+        .header-info a{
+            color: #FFFFFF;
+            transition: all 0.5s;
+        }
+        .header-info a:hover{
+            color: #86BC42;
+        }
+        .header-email{
+            margin: 0px 10px;
+            padding: 2px 10px;
+            border-left: 1px solid gray;
+        }
+        .MenuUser{
+            padding-right: 15px;
+            padding-top: 13px;
+            position: relative;
+
+            font-size: 14px;
+            float: right;
+            right: -41%;
+        }
+        .MenuUser a{
+             margin: 0px 12px;
+             color: white;
+            transition: all .5s;
+         }
+        .MenuUser a:hover{
+            color:  rgb(45, 62, 80);
+        }
+
+        .border{
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+        }
+        .header{
+            height: 88px;
+            background-color: white;
+            box-shadow: 3px 10px 30px #888888;
+        }
+        .MenuPag{
+            text-transform: uppercase;
+            float: right;
+            color: rgb(51,51,51);
+        }
+        .MenuPag li{
+            padding:  24px 0px  8px 29px ;
+            display: block;
+        }
+        .MenuPag a:hover{
+            color: #86BC42;
+        }
+        .SubOp{
+            background-color: aqua;/*bisque*/
+            padding: 10px 15px ;
+            border-bottom: 1px solid gray;
+            display: block;
+
+        }
+        .SubOp:hover{
+            background-color: cadetblue;
+            color: #FFFFFF;
+        }
+
+        .search{
+            width: 15px;
+            height: 15px;
+            background-color: #86BC42;
+            border: 5px solid #86BC42;
+            border-right-width: 8px;
+            border-left-width: 8px;/**/
+
+            font-size: 14px;
+            color: #FFFFFF;
+
+        }
+        .menuBorder{
+            margin-top: 7px;
+            width: 0px;
+            height: 2px;
+            background-color: #86BC42;
+            visibility: hidden;
+
+            transition: all 0.5s;
+        }
+        .MenuPag li:hover .menuBorder{
+            visibility: visible;
+            width: 20px;
+        }
+        .Container{
+
+        }
+        .SectionSpace{
+            border-right: 5px solid #2D3E50;
+            height:  140px;
+            width: 100%;
+        }
+
+        .Section1:before{
+            content: "";
+            width: 47.96%;
+            border-bottom: 110px solid #86BC42;
+            border-right: 1px #86BC42;
+            position: relative;/**/
+            top: -20px;
+            float: left;
+            left: 0px;
+        }
+        .Section1:after{
+            content: "";
+            left: 47.93%;
+            position: absolute;/**/
+            top: -20px;
+            border-right: 61px solid transparent;
+            border-bottom: 110px solid #86BC42;
+        }
+        .Section1{
+            background: url("secc1.jpg");
+            height: 375px;
+            width: 100%;
+            transform:  translateX(10px) scaleX(1.02);
+
+            font-family: "Raleway", sans-serif;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 500;
+            color: #FFFFFF;
+            text-align: left;
+        }
+        .Section1 h1{
+            position: absolute;
+        }
+        .Section1-Align{
+            width: 60%;
+            margin-left: 70px;
+        }
+        .Section1 p{
+            margin-top: 130px;
+            text-align: left;
+        }
+        .Section1 a{
+            color: #FFFFFF;
+            border: 10px solid #86BC42;
+            background: #86BC42;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            padding: 4px 30px ;
+        }
+        .SectionTitle{
+            color: #2D3E50;
+            alignment: center;
+        }
+        .SectionTitleAling{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            margin: 0 auto;
+            width: 300px;
+            border-bottom: 2px solid #2D3E50;
+        }
+        .SectionTitleAling img{
+            width: 20%;
+            position: relative;
+            top: 20px;
+            left: 46%;
+        }
+        .SectionTitleAling p{
+            font-family: "Raleway", sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+        }
+        .SectionTitleAling i{
+            font-size: 22px;
+            text-align: center;
+            position: relative;
+            top: 10px;
+            background-color: #fff;
+            padding: 0 10px;
+            margin: 0;
+        }
+        .SectionFinal:before{
+            content: "";
+            width: 44.5%;
+            border-bottom: 149px solid #86BC42;
+            border-right: 1px #86BC42;
+            position: relative;/**/
+            top: -20px;
+            float: left;
+            left: 0px;
+        }
+        .SectionFinal::after{
+            content: "";
+            left: 44.445%;
+            border-right: 61px solid transparent;
+            border-bottom: 149px solid #86BC42;
+        }
+        .SectionFinal{
+            background: #2D3E50;
+            height: 573px;
+        }
+        .Title{
+            width: 400px;
+            position: absolute;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            color: #FFFFFF;
+
+        }
+        .SectionFinal h1{
+            margin: 0;
+            padding: 0;
+
+        }
+        .SectionFinal h2{
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .Columna{
+            width: 22%;
+            text-align: left;
+            color: #fff;
+            float: left;
+            margin-right: 33px;
+        }
+        .Columna li{
+            float: none;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .Columna ul{
+            float: none;
+            margin-top: 38px;
+        }
+        .Columna h1{
+            position: inherit;
+        }
+        .Columna i{
+            font-size: 20px;
+        }
+        .Columna span{
+            text-align: center;
+        }
+        .Social{
+            margin-top: 33px;
+            border: .1px solid blue;
+        }
+        .Social i{
+            width: 25px;
+            height: 25px;
+            margin: 0px 5px;
+            padding: 4px;
+            text-align: center;
+            /*border: 4px solid white;*/
+            background: #FFFFFF;
+            color: #2D3E50;
+        }
+        .Social i:hover{
+            background: #86BC42;
+            color: #fff;
+        }
+        .Suscribete a{
+            border: 1px solid #86BC42;
+            background: #86BC42;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 14px;
+            font-family:'Raleway', sans-serif; padding: 18px 50px;
+        }
+        .Suscribete a:hover{
+            background: #FFFFFF;
+            color: #86BC42;
+        }
+        .Columna a{
+            border: 0;
+            padding: 0;
+            background: transparent;
+            font-weight: 600;
+        }
+        .Columna a:hover{
+            color: #86BC42;
+        }
+        .Insta img{
+            width: 75px;
+            height: 75px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .Insta ul{
+            margin-top: 30px;
+        }
+        .Insta div{
+            width: 10px;
+            height: 10px;
+            background: rgba(134, 188,66,.8);
+            color: #fff;
+            position: relative;
+            font-size: 18px;
+        }
+        .Cuadro{
+            width: 580px;
+            height: 240px;
+            margin-right: 5px;
+            box-shadow: 10px 10px black;
+            float: left;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="TotalContainer">
+
+    <div class="header-top">
+        <!---<div class="header-top-menu">
+            <div class="triangle-green"></div>
+        </div>-->
+        <div class="Align">
+            <div class="header-info">
+                <span> <a href="#">+0123456789</a></span>
+                <span class="header-email">
+                    <a href="#">example@example.com</a>
+                </span>
+            </div>
+            <div class="MenuUser">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            My account
+                        </a>
+                    </li>
+                    <li class="border"><a href="#"><i class="fas fa-heart"></i>Wishlist</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-basket"></i>Checkout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="Align">
+            <img src="logo.png" alt="Logo de la Escuela">
+            <div class="MenuPag">
+                <ul >
+                    <li>
+                        <a href="#">Home</a>
+                        <div class="menuBorder"></div>
+
+                    </li>
+                    <li><a href="#">About Us </a><div class="menuBorder"></div></li>
+                    <li><a href="#">Courses</a><div class="menuBorder"></div></li>
+                    <li><a href="#">Pages</a><div class="menuBorder"></div></li>
+                    <li><a href="#">Shop</a><div class="menuBorder"></div></li>
+                    <li><a href="#">Contact Us</a><div class="menuBorder"></div></li>
+                    <li><a class="search" style="margin-left: 20px" href="#">
+                        <i class="fas fa-search" style="padding: 0px; "></i>
+                    </a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="Container">
+        <div class="SectionSpace"></div>
+        <div class="Section1">
+            <div class="Align">
+                <div class="Section1-Align">
+                    <h1>WHY EDUCAT ?</h1>
+                    <p>There are many variations of passages of Lorem Ipsum available,
+                        but the majority have suffered alteration in some form,
+                        by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need
+                        to be sure there isn't anything embarrassing hidden in the middle of
+                        text amr songr balga ami toami valo lasi ciri din akr dali</p>
+                    <br>
+                    <a href="#">LEARN NOW</a>
+                </div>
+            </div>
+        </div>
+        <div class="SectionSpace"></div>
+        <div class="SectionTitle">
+            <div class="Align">
+                <div class="SectionTitleAling">
+                    <h1>LASTEST NEWS</h1>
+                    <p> There are many variations of passages </p>
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="Align" style="padding: 0;">
+                <div style="height: 400px;">
+                    <div class=" Cuadro "></div>
+                    <div class="Cuadro "></div>
+                    <div class="Cuadro "></div>
+                    <div class="Cuadro "></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="SectionSpace"></div>
+        <div class="Section1 SectionFinal">
+            <div class="Align">
+                <div >
+                    <div class="Suscribete">
+                        <div class="Title">
+                            <h2>SUBSCRIBE</h2>
+                            <h1>TO OUR NEWSLETTER</h1>
+                        </div>
+                        <div style="margin-top: 21px; text-align: right">
+                            <input type="email" style="width: 348px; height: 50px;" placeholder="Enter your email address">
+                            <a href="#" class="">
+                                Subscribe
+                            </a>
+                        </div>
+                    </div>
+                    <div class="SectionSpace"></div>
+                    <div class="" style=" height: 200px;">
+                        <div class=" Columna">
+                            <img src="footer.png" alt="logo" style="width: 234px;">
+                            <div style="height: 70px;"></div>
+                            <span>
+                                There are many variations of passg
+                                of Lorem Ipsum available, but thmajority have suffered altem,
+                            </span>
+                            <div class="Social">
+                                <span><i class="fab fa-facebook-f"></i></span>
+                                <span><i class="fab fa-google-plus-g"></i></span>
+                                <span><i class="fab fa-twitter"></i></span>
+                                <span><i class="fas fa-rss"></i></span>
+                                <span><i class="fab fa-linkedin-in"></i></span>
+                            </div>
+                        </div>
+                        <div class=" Columna">
+                            <h2 style="margin: 0; padding: 0;">GET IN TOUCH</h2>
+                            <span></span>
+                            <ul>
+                                <li><i class="fas fa-phone"></i>+88 012 345 37890</li>
+                                <li><i class="fas fa-envelope"></i>example@example.com</li>
+                                <li><i class="fas fa-globe"></i>www.example.com</li>
+                                <li><i class="fas fa-map-marker"></i>ur address goes here,street.</li>
+                            </ul>
+                        </div>
+                        <div class="Columna">
+                            <h2 style="margin: 0; padding: 0;">Useful Links</h2>
+                            <ul>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Become a Teacher</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Courses</a></li>
+                            </ul>
+                        </div>
+                        <div class="Columna" style="height: 200px;">
+                            <h2>Instagram</h2>
+                            <div class="Insta">
+                                <ul>
+                                    <li>
+                                        <img src="1.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="2.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="3.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="4.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="5.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="6.jpg" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
