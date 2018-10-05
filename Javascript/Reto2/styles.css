@@ -17,6 +17,7 @@ h1{
     height: 600px;
     background-size: 100% 100%;
     color:black;
+    opacity: 1;
 }
 #imagen1{
     background-image: url("pastel (1).jpg");
@@ -38,6 +39,7 @@ h1{
     position: relative;/**/
     top: 250px;
 }
+
 #izq{
     float: left;
     transform: rotate(180deg);
