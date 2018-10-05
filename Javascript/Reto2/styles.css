@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+div{
+    
+}
+h1{
+    padding: 100px 10px 0 ;
+    margin: 0;
+    
+}
+
+.slide{
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    background-size: 100% 100%;
+    color:black;
+}
+#imagen1{
+    background-image: url("pastel (1).jpg");
+}
+#imagen2{
+    background-image: url("pastel (2).jpg");
+}
+#imagen3{
+    background-image: url("pastel (3).jpg");
+}
+#imagen4{
+    background-image: url("pastel (4).jpg");
+} 
+.mueve{
+    width: 100px;
+    height: 100px;
+    background-image: url("flecha.png");
+    background-size: 100% 100%;
+    position: relative;/**/
+    top: 250px;
+}
+#izq{
+    float: left;
+    transform: rotate(180deg);
+}
+#der{
+    float: right;
+}
+#nav{
+    margin: 0 auto;
+}
+
+#nav div{
+    width: 12px; 
+    height: 12px;
+    border-radius: 50%;
+    background: palevioletred;
+    float: left;
+    margin: 2px;
+    border: 1px solid black;
+}

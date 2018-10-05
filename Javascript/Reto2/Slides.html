@@ -7,41 +7,79 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <title>Document</title>
     <script type="text/javascript">
+        var numSlides;
+        var arr;
+        var indice = 0;
         function cargaIndice(){
-
-            alert(document.getElementById("sliderContenido").children.length);
-            for(i=0; i<5; i++){
-                document.getElementById("nav").innerHTML += "<div></div>"
+            arr = document.getElementById("sliderContenido").children;
+            numSlides = document.getElementById("sliderContenido").children.length;
+            document.getElementById("nav").style.width = numSlides * 20+ "px";
+            for(let i=0; i<numSlides; i++){
+                document.getElementById("nav").innerHTML += "<div onclick='cargaSlide("+i+")'></div>";
+            } 
+            cargaSlide(0);
+        }
+        function cargaSlide(j){
+            for(i=0; i<numSlides; i++){
+                arr[i].style.display = "none";
+                cambiaColor(i, false);
+                //arr[i].style.background = "pink";
+                //arr[i].style.border = "2px solid white";
             }
+            arr[j].style.display = "block";
+            cambiaColor(j, true);
+        }
+        function cambiaColor(j, activo){
+            var navegador = document.getElementById("nav").children;
+            if(activo){
+                navegador[j].style.background = "pink";
+                navegador[j].style.border = "2px solid black";
+            }
+            else{
+                navegador[j].style.background = "palevioletred";
+                navegador[j].style.border = "1px solid white";
+            }
+        }
+
+        function mueve(dir){
+            indice+= dir;
+            if(indice > numSlides-1)
+                indice = 0;
+            if(indice<0)
+                indice = 4;
+            alert(indice);
+            cargaSlide(indice);
         }
     </script>
 </head>
 
 <body onload="cargaIndice()">
     <div class="slider">
-        <div class="sliderContenido" id="sliderContenido">
-            <div class="slide1" id="imagen1">
+        <div class="mueve" id="izq" onclick="mueve(-1)"></div>
+        <div class="mueve" id="der" onclick="mueve(1)"></div>
+        <div id="sliderContenido">
+            <div class="slide" id="imagen1">
                 <h1>Título</h1>
                 <p>texto descriptivo del slider</p>
                 <a href="#">Ver mas</a>
             </div>
-            <div class="slide2" id="imagen2">
+            <div class="slide" id="imagen2">
                 <h1>Título</h1>
                 <p>texto descriptivo del slider</p>
                 <a href="#">Ver mas</a>
             </div>
-            <div class="slide3" id="imagen3">
+            <div class="slide" id="imagen3">
                 <h1>Título</h1>
                 <p>texto descriptivo del slider</p>
                 <a href="#">Ver mas</a>
             </div>
-            <div class="slide4" id="imagen4">
+            <div class="slide" id="imagen4">
                 <h1>Título</h1>
                 <p>texto descriptivo del slider</p>
                 <a href="#">Ver mas</a>
             </div>
-            <div class="nav"></div>
         </div>
+        <div id="nav"></div>
 
     </div>
 </body>
