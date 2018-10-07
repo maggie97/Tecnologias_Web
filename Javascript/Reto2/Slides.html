@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <title>Document</title>
     <script type="text/javascript">
-        var numSlides;
-        var arr;
-        var indice = 0;
-        var intervalo = setInterval(Transicion , 500);
+        var numSlides; // numero de Slides a mostrar 
+        var arr; //Arreglo de imagenes 
+        var indice = 0; //Indice de la imagen mostrada 
+        var difumina ; // variable que contiene el intervalo que Difumina (Oculta) la imagen actual
+        var muestra; //variable que contiene el intervalo que muestra la imagen 
+        var opacity; //opacidad de la imagen actual
+        var timeMuestra;
         function cargaIndice(){
             arr = document.getElementById("sliderContenido").children;
             numSlides = document.getElementById("sliderContenido").children.length;
             document.getElementById("nav").style.width = numSlides * 20+ "px";
             for(let i=0; i<numSlides; i++){
                 document.getElementById("nav").innerHTML += "<div onclick='cargaSlide("+i+")'></div>";
-            } 
-            cargaSlide(0); 
+            }   
+            cargaSlide(0);  
         }
-        function cargaSlide(j){
+        function cargaSlide(j){ // establece valores de las imagenes predeterminados 
             for(i=0; i<numSlides; i++){
-                arr[i].style.display = "none";
-                cambiaColor(i, false); 
+                arr[i].style.display = "none"; 
+                arr[i].style.opacity = "0";
+                cambiaColor(i, false); //cambia el color de los circulos que estan en el nav 
             }
             arr[j].style.display = "block";
+            opacity = 0; // establece la opacidad en 0 para que se muestre poco a poco 
+            muestra = setInterval(Muestra, 5); 
             cambiaColor(j, true);
+            //alert();
         }
         function cambiaColor(j, activo){
             var navegador = document.getElementById("nav").children;
@@ -39,16 +46,30 @@
                 navegador[j].style.border = "1px solid white";
             }
         } 
-        function Transicion(){
-            alert(arr[indice].style.width);
-            var op = arr[indice].style.color; 
-            alert(op);
-            if(arr[indice].style.opacity <= 0){
-                //clearInterval(intervalo);
-                if(arr[indice+1].style.opacity == 1)
-                    mueve(1);
-            }
-
+        function Oculta(){
+            if(arr[indice].style.opacity >= 0.00){ 
+                arr[indice].style.opacity -= .01; 
+            } 
+            if(arr[indice].style.opacity == 0.2){
+                //alert("0");
+                mueve(1);
+                clearInterval(difumina); //limpia la varible que difimuna la imagen 
+            } 
+        }
+        function Muestra(){
+            //alert("Muestra" + opacity);
+            if( opacity <= 1){ 
+                opacity+=.01;
+                arr[indice].style.opacity = opacity; 
+            }  
+            if(arr[indice].style.opacity == 1){
+                //alert("1"); 
+                clearInterval(muestra); // limpio la variable muestra 
+                timeMuestra = setTimeout(() => {
+                    difumina = setInterval(Oculta, 5); // llamo y asigno el Intervalo a la variable difumina 
+                    clearTimeout(timeMuestra);
+                }, 2000); // pero se llamara una vez que pasen 2 seg
+            } 
         }
         function mueve(dir){
             indice+= dir;
@@ -57,9 +78,7 @@
             if(indice<0)
                 indice = 4;
             cargaSlide(indice);
-            
         }
-
         function holi(){
             alert("holi");
             arr[indice] -= .1;
