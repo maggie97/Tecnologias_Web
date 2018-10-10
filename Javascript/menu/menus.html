@@ -3,46 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <link rel="stylesheet" href="estilos.css" type="text/css"> 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>menus</title>
     <script type="text/javascript">
-        function mostrarSubMenu(id){
-            arr = document.getElementsByClassName("item");
-            //alert(arr.length);
-            /*for(i = 0 ; i <  arr.length; i++){
-                alert(arr[i]);
-                document.getElementById("SOp" + i).style.visibility = "hidden;";
-            }*/
-            alert(arr);
-            document.getElementById("SOp" + id).style.visibility = "visible";
-            //document.getElementById(m
+        //acomodo de menu
+        var orientacion;
+        //var orientacion = 'Horizontal';
+        orientacion = 'Vertical';
+        function acomodoMenu(){
+            //alert();
+            if(orientacion == 'Horizontal'){
 
+            }
+            else if(orientacion == 'Vertical'){
+                
+                var arr = document.getElementsByClassName("item");
+                for(i = 0; i<arr.length ; i++){
+                    arr[i].style.clear = "both";
+                }
+                var menu = document.getElementsByClassName("menu");
+                menu[0].style.width = "112px";
+                menu[0].style.height = (arr.length * 70) + "px";
+                //menu.style.width = "100%";
+                //alert("entro");
+                //menu.style.height ="100%";
+                //alert("entro");
+                //arr.style.clear = "both";
+                
+                //
+            }
+            else{
+
+            }
+        }
+        function mostrarSubMenu(id, m){ 
+            y = document.getElementById(m).offsetTop;
+            x = document.getElementById(m).offsetLeft;
+            a = document.getElementById(m).offsetHeight;
+ 
+            
+            document.getElementById("SOp" + id).style.visibility = "visible";
+            document.getElementById("SOp" + id).style.top = (y+a) + "px" ;
+            document.getElementById("SOp" + id).style.left = x +"px"
+        }
+        function ocultasubMenu(id){
+            document.getElementById("SOp" + id).style.visibility = "hidden";
         }
     </script>
 </head>
-<body>
+<body onload="acomodoMenu()">
     <div class="menu">
-        <div class="item" onmouseover="mostrarSubMenu('1')"> <a href="#">Opcion 1</a></div>
-        <div class="item" onmouseover="mostrarSubMenu('2')"> <a href="#">Opcion 2</a></div>
-        <div class="item" onmouseover="mostrarSubMenu('3')"> <a href="#">Opcion 3</a></div>
-        <div class="item" onmouseover="mostrarSubMenu('4')"> <a href="#">Opcion 4</a></div>
-        <div class="item" onmouseover="mostrarSubMenu('5')"> <a href="#">Opcion 5</a></div>
+        <div class="item" id="uno" onmouseout="ocultasubMenu('1')" onmouseover="mostrarSubMenu('1', 'uno')"> <a href="#">Opcion 1</a></div>
+        <div class="item" id="dos" onmouseout="ocultasubMenu('2')" onmouseover="mostrarSubMenu('2' , 'dos')"> <a href="#">Opcion 2</a></div>
+        <div class="item" id="tres" onmouseout="ocultasubMenu('3')" onmouseover="mostrarSubMenu('3', 'tres')"> <a href="#">Opcion 3</a></div>
+        <div class="item" id="cuatro" onmouseout="ocultasubMenu('4')"onmouseover="mostrarSubMenu('4', 'cuatro')"> <a href="#">Opcion 4</a></div>
+        <div class="item" id="cinco" onmouseout="ocultasubMenu('5')" onmouseover="mostrarSubMenu('5', 'cinco')"> <a href="#">Opcion 5</a></div>
     </div>
-    <div class="subMenu" id="SOp1">
+    <div class="subMenu" id="SOp1" onmouseout="ocultasubMenu('1')" onmouseover="mostrarSubMenu('1', 'uno')">
         <ul>
             <li class="subItem" > <a href="#">Sub Opcion 1.1</a></li>
             <li class="subItem"> <a href="#">Sub Opcion 1.2</a></li>
             <li class="subItem"> <a href="#">Sub Opcion 1.3</a></li> 
         </ul>
     </div>
-    <div class="subMenu" id="SOp3">
+    <div class="subMenu" id="SOp3" onmouseout="ocultasubMenu('3')" onmouseover="mostrarSubMenu('3', 'tres')">
         <ul>
             <li class="subItem "> <a href="#">Sub Opcion 3.1</a></li>
             <li class="subItem "> <a href="#">Sub Opcion 3.2</a></li> 
         </ul>
     </div>
-    <div class="subMenu" id="SOp4">
+    <div class="subMenu" id="SOp4" onmouseout="ocultasubMenu('4')" onmouseover="mostrarSubMenu('4', 'cuatro')">
         <ul>
             <li class="subItem "> <a href="#">Sub Opcion 4.1</a></li>
             <li class="subItem "> <a href="#">Sub Opcion 4.2</a></li>

@@ -28,6 +28,7 @@ a{
 .subMenu{
     width: 200px;
     visibility: hidden;
+    position: absolute;
 }
 
 .subMenu ul{
