@@ -22,7 +22,7 @@ a{
 }
 
 .item a:hover{
-    background-color: rgb(13, 81, 112);
+    background-color: /*rgb(38, 162, 167)/*/rgb(13, 81, 112);
     color: white;
 }
 .subMenu{
@@ -36,8 +36,12 @@ a{
     padding: 0;
     margin: 0;
 }
+.subMenu li{
+    padding: 5px 0px 5px 0px;
+}
 .subMenu a{
-    margin: 5px; 
+    margin: 0px; 
+    padding: 5px 5px 5px 5px;
     background-color: cadetblue;
     border-bottom: 1px solid beige; 
     /*display: none;*/

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No sirve para nada </title>
+    <style type="text/css"> 
+    .caja{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid red;
+    }
+    </style>
+    <script type="text/javascript">
+        function position(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            var c = document.getElementById("caja");
+            c.innerHTML = "X coords: " + x + ", Y coords: "+y;
+            c.style.top = y + "px";
+            c.style.left = x + "px";
+        }
+        function ampliaBody(){
+            document.getElementById("CajaOculta").style.width = window.innerWidth + "px";
+            document.getElementById("CajaOculta").style.height = window.innerHeight + "px";
+        }
+        function creaCaja(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            var body = document.getElementById("contenido");
+            var div = document.createElement("div");
+            var text = document.createTextNode("X coords: " + x + ", Y coords: "+y);
+            div.className = "caja";
+            div.style.top = y + "px";
+            div.style.left = x + "px";
+            div.appendChild(text);
+            body.appendChild(div);
+        }
+    </script>
+</head>
+<body id="contenido" onmousemove="position(event)" onload="ampliaBody()" onclick="creaCaja(event)">
+    <div id="CajaOculta">
+        <div id="caja" class="caja">caja</div>
+    </div>
+    
+</body>
+</html>

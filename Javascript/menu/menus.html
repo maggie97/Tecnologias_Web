@@ -9,43 +9,44 @@
     <script type="text/javascript">
         //acomodo de menu
         var orientacion;
-        //var orientacion = 'Horizontal';
-        orientacion = 'Vertical';
+        //orientacion = 'Horizontal';
+        //orientacion = 'Vertical';
         function acomodoMenu(){
-            //alert();
+            orientacion = prompt("Orientacion del menu", orientacion);
+            var menu = document.getElementsByClassName("menu");
             if(orientacion == 'Horizontal'){
-
+                menu[0].style.background= "rgb(58, 226, 231)";
             }
             else if(orientacion == 'Vertical'){
                 
                 var arr = document.getElementsByClassName("item");
                 for(i = 0; i<arr.length ; i++){
                     arr[i].style.clear = "both";
-                }
-                var menu = document.getElementsByClassName("menu");
+                } 
                 menu[0].style.width = "112px";
-                menu[0].style.height = (arr.length * 70) + "px";
-                //menu.style.width = "100%";
-                //alert("entro");
-                //menu.style.height ="100%";
-                //alert("entro");
-                //arr.style.clear = "both";
-                
-                //
+                menu[0].style.height = (arr.length * 70) + "px"; 
             }
             else{
-
+                menu[0].style.visibility = "hidden";
             }
         }
         function mostrarSubMenu(id, m){ 
             y = document.getElementById(m).offsetTop;
-            x = document.getElementById(m).offsetLeft;
-            a = document.getElementById(m).offsetHeight;
- 
-            
+            x = document.getElementById(m).offsetLeft; 
+            //var alto, ancho;
+            if(orientacion == 'Horizontal'){
+                a = document.getElementById(m).offsetHeight;
+                alto = (y+a );
+                ancho = x  ;
+            }
+            if (orientacion == 'Vertical'){
+                b = document.getElementById(m).offsetWidth;
+                alto = y;
+                ancho = x + b - 5;
+            }
             document.getElementById("SOp" + id).style.visibility = "visible";
-            document.getElementById("SOp" + id).style.top = (y+a) + "px" ;
-            document.getElementById("SOp" + id).style.left = x +"px"
+            document.getElementById("SOp" + id).style.top = alto  + "px" ;
+            document.getElementById("SOp" + id).style.left = ancho + "px";
         }
         function ocultasubMenu(id){
             document.getElementById("SOp" + id).style.visibility = "hidden";
