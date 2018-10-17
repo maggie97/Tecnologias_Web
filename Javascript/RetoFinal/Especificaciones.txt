@@ -1,0 +1,15 @@
+Nommbre de la pagina "Elorcado"
+
+-Nombre del jugador  
+	Si no da un nombre no puede iniciar 
+-Tiempo juego por intento
+	Cuando se refresca la pag se empieza desde el principio sin ningun intento 
+-tiempos de intentos correctos ( solo 5)
+	
+-niveles (3) 
+	Longitud de palabras 
+-representacion grafica 
+
+-grafica
+
+NOTA: NO AGREGAR NINGUNA OTRA CARACTERISTICA NO ESPECIFICADA  

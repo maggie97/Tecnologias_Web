@@ -1,0 +1,143 @@
+body{
+    background-image: url(libreta.jpg);
+    margin: 0%;
+    padding: 100px 0%;
+}
+div{
+    
+}
+.contenido{
+    width: 80%;
+    margin: 0  auto;
+}
+
+
+.contenido div{
+    
+}
+#palabra{
+    margin: 0 auto;
+    display: table;
+}
+.letra{ 
+    width: 40px;
+    height: 60px;
+
+    display: table-cell;
+    padding: 5px; 
+
+    background-repeat: no-repeat;
+}
+.espacio{
+    width: 40px;
+    height: 50px;
+}
+.linea{
+    width: 100%;
+    height: 10px;  
+    background-image: url(linea.png);
+    background-size: 100% 100%;
+    /*border-bottom: 2px solid red;*/
+}
+.teclado{
+    margin-top: 50px;
+    /*display: table;*/
+}
+.teclado div{
+    margin: 0 auto; 
+    display: table;
+}
+.teclado div div{
+    width: 40px;
+    height: 50px;
+    margin: 0 auto; 
+    display: table-cell;
+
+    border-bottom-left-radius: 20px;
+    border-top-right-radius:  20px;
+    border: 1px solid black;
+    
+} 
+.dibujo{
+
+}
+/*Letras*/
+#A, #letraA{
+    background: url(letras/A.png) no-repeat ;
+}
+#B, #letraB{
+    background-image: url(letras/B.png); 
+}
+#C, #letraC{
+    background-image: url(letras/C.png); 
+}
+#D, #letraD{
+    background-image: url(letras/D.png); 
+}
+#E, #letraE{
+    background-image: url(letras/E.png); 
+}
+#F, #letraF{
+    background-image: url(letras/F.png); 
+}
+#G, #letraG{
+    background-image: url(letras/G.png); 
+}
+#H, #letraH{
+    background-image: url(letras/H.png); 
+}
+#I, #letraI{
+    background-image: url(letras/I.png); 
+}
+#J, #letraJ{
+    background-image: url(letras/J.png); 
+}
+#K, #letraK{
+    background-image: url(letras/K.png); 
+}
+#L, #letraL{
+    background-image: url(letras/L.png); 
+}
+#M, #letraM{
+    background-image: url(letras/M.png); 
+}
+#N, #letraN{
+    background-image: url(letras/N.png); 
+}
+#O, #letraO{
+    background-image: url(letras/O.png); 
+}
+#P, #letraP{
+    background-image: url(letras/P.png); 
+}
+#Q, #letraQ{
+    background-image: url(letras/Q.png); 
+}
+#R, #letraR{
+    background-image: url(letras/r.png); 
+}
+#S, #letraS{
+    background-image: url(letras/S.png); 
+}
+#T, #letraT{
+    background-image: url(letras/T.png); 
+}
+#U, #letraU{
+    background-image: url(letras/U.png); 
+}
+#V, #letraV{
+    background-image: url(letras/V.png); 
+}
+#W, #letraW{
+    background-image: url(letras/W.png); 
+}
+#X, #letraX{
+    background-image: url(letras/X.png); 
+}
+#Y, #letraY{
+    background-image: url(letras/Y.png); 
+}
+#Z, #letraZ{
+    background-image: url(letras/Z.png); 
+}
+
