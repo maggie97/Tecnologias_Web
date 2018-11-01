@@ -8,12 +8,19 @@
     <title>Document</title> 
     <script language="javascript" type="text/javascript" src="funciones.js"></script> 
 </head>
-<body onload="espacios()"> 
+<body onload="cargaPag()"> 
     <div class="contenido">
-        <div class="dibujo" id="monito"></div>
+        <div class="vidas"><h1>Vidas = <div id="numV"></div> </h1></div>
+        <div  id="monito" style="background-size: 100% 100%;" value="0" ></div>
+        <div class="post">
+            <div style="background: rgb(255, 238, 3); color: black; text-align: center; padding: 5px;">
+                <h1>Records:</h1>
+            </div>
+            <div id="records"></div>
+        </div>
         <div id="palabra"></div>
-        <div class="teclado">
-            <div class="arriba">
+        <div class="teclado" onmouseup="Perdi()">
+            <div class="arriba" id ="up">
                 <div id="A" onclick="clickLetra('A')"></div>
                 <div id="B" onclick="clickLetra('B')"></div>
                 <div id="C" onclick="clickLetra('C')"></div>
@@ -29,7 +36,7 @@
                 <div id="M" onclick="clickLetra('M')"></div>
                 <div id="N" onclick="clickLetra('N')"></div> 
             </div>
-            <div class="abajo">
+            <div class="abajo" id="down">
                 <div id="O" onclick="clickLetra('O')"></div>
                 <div id="P" onclick="clickLetra('P')"></div>
                 <div id="Q" onclick="clickLetra('Q')"></div>
